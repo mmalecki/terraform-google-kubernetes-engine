@@ -24,6 +24,10 @@ output "key_id" {
   description = "ID of the Key created for the attestor"
 }
 
+output "key_version_name" {
+  value       = data.google_kms_crypto_key_version.version.name
+  description = "Fully-qualified name of the Key version created for the attestor"
+}
 
 output "attestor" {
   value       = google_binary_authorization_attestor.attestor.name
